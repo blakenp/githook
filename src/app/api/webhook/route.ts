@@ -26,6 +26,11 @@ export async function POST(req: NextRequest) {
     // This is typically a test event sent by GitHub to check the webhook's connectivity
     // You can log or perform any necessary actions for testing or verification
     console.log('Received ping event from GitHub');
+  } else if (eventType === 'issues') {
+    // Handle issues event
+    // This event is triggered when a new issue is added to the repository
+    // You can log or perform any specific actions for new issue events
+    console.log('Received new issue event from GitHub');
   } else {
     // Handle other event types as needed
     // Log or perform actions based on the specific event types you want to handle
@@ -36,6 +41,7 @@ export async function POST(req: NextRequest) {
   middleware(res, req);
   return res;
 }
+
 
 
 export async function OPTIONS(req: NextRequest) {
