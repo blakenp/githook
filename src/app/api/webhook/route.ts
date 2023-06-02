@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     console.log('Received unknown event type:', eventType);
   }
 
-  const res = new NextResponse('POST Request Successful');
+  const res = new NextResponse('POST Request Successful!!!! LET\'S GO!!!!!!!');
   middleware(res, req);
   return res;
 }
