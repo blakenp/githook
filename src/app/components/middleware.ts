@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const allowedOrigins = ['https://api-request-two.vercel.app', 'http://localhost:3000']
+const allowedOrigins = ['https://api-request-two.vercel.app', 'http://localhost:3000', 'https://github.com/blakenp/githook/settings/hooks']
 
 function middleware(response: NextResponse, request: NextRequest) {
   const requestHeaders = new Headers(request.headers)
