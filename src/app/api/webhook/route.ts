@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-    const res = new NextResponse('POST Request Successful')
+    const res = NextResponse.json({message: 'POST Request Successful'})
     console.log('POST successful')
     middleware(res, req)
     return res
