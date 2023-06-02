@@ -11,6 +11,7 @@ export async function POST(req: NextRequest) {
     const res = NextResponse.json({message: 'POST Request Successful'})
     console.log('POST successful')
     middleware(res, req)
+    console.log('Response sent:', res.json);
     return res
 }
 
