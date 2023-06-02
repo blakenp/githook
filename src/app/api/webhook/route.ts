@@ -8,6 +8,9 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+    const payload = await req.json(); // Parse the JSON payload from the request body
+    console.log(payload); // Handle the payload as needed
+
     const res = new NextResponse('POST Request Successful')
     middleware(res, req)
     return res
