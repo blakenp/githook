@@ -11,7 +11,8 @@ export async function POST(req: NextRequest) {
     const payload = await req.json(); // Parse the JSON payload from the request body
     console.log(payload); // Handle the payload as needed
 
-    const res = new NextResponse('POST Request Successful')
+    const res = NextResponse.json({message: 'POST Request Successful'})
+    console.log('POST successful')
     middleware(res, req)
     return res
 }
